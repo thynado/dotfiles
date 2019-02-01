@@ -1,0 +1,32 @@
+[
+    {
+        "key": "cmd+k",
+        "command": "workbench.debug.panel.action.clearReplAction"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "editor.action.reindentselectedlines"
+    },
+    {
+        "key": "ctrl+cmd+s",
+        "command": "editor.action.sortLinesAscending"
+    },
+    {
+        "key": "cmd+;",
+        "command": "editor.emmet.action.expandAbbreviation",
+        "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "workbench.action.editor.changeLanguageMode"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.gotoSymbol"
+    }
+]

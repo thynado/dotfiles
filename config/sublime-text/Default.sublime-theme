@@ -1,0 +1,14 @@
+[
+    {
+        "class": "sidebar_container",
+        "content_margin": 0
+    },
+    {
+        "class": "sidebar_label",
+        "font.face": "SF Pro Text"
+    },
+    {
+        "class": "sidebar_tree",
+        "row_padding": [23, 6]
+    }
+]
