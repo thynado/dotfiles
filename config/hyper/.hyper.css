@@ -20,10 +20,10 @@
     color: transparent;
 }
 .tabs_nav {
-    background: rgba(0, 0, 0, 0.2);
+    background: #0d0d0d;
 }
 .tab_tab:not(.tab_active) {
-    background: rgba(0, 0, 0, 0.2);
+    background: #0d0d0d;
 }
 .tab_tab:not(.tab_active) span {
     color: rgba(255, 255, 255, 0.2) !important;

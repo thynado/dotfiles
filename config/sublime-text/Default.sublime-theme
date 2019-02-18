@@ -5,10 +5,10 @@
     },
     {
         "class": "sidebar_label",
-        "font.face": "SF Pro Text"
+        "font.face": "Inter UI"
     },
     {
         "class": "sidebar_tree",
-        "row_padding": [23, 6]
+        "row_padding": [20, 12, 20, 0]
     }
 ]

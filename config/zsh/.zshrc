@@ -15,6 +15,7 @@ export PATH="$BASEPATH"
 export TZ="America/Chicago"
 export ZSH=$HOME/.oh-my-zsh
 export NODE_PATH="/usr/local/lib/node_modules"
+eval "$(rbenv init -)"
 
 # Unset, disable, etc.
 unsetopt PROMPT_SP
@@ -134,13 +135,19 @@ confirm () {
 
 # Clone a git repo, ask if .git folder should be removed or kept.
 clone () {
-    local dname=$(echo $1 | grep -o "[^/]*\.git")
+    local origin=$1
+
+    if [[ $origin != *"://"* ]]; then
+        origin="https://github.com/$origin.git"
+    fi
+
+    local dname=$(echo $origin | grep -o "[^/]*\.git")
     dname=${dname//.git}
     
     if confirm "Remove .git folder"; then
-        git clone $1 && cd $dname && rm -rf .git
+        git clone $origin && cd $dname && rm -rf .git
     else
-        git clone $1 && cd $dname
+        git clone $origin && cd $dname
     fi
 }
 

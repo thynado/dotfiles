@@ -1,4 +1,4 @@
-// -- hyper-stylesheet-hash:407414920347879b9afc3e146c4cb7e3 --
+// -- hyper-stylesheet-hash:509560344d31fed29bd0b611afbded02 --
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.

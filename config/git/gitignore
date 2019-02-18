@@ -1,11 +1,4 @@
-# Globals
 *~
-
-# Extensions
-.bundle
 .DS_Store
+.bundle
 .sass-cache
-
-# Directories
-public
-vendor
