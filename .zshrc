@@ -7,6 +7,12 @@ export HIST_STAMPS="yyyy-mm-dd"
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
+plugins=(git golang macos docker)
+source $ZSH/oh-my-zsh.sh
+
+alias l="exa --long"
+alias ll="exa --long --all"
+alias ls="exa --all"
 alias cat="bat --paging=never --theme=Dracula --style=numbers"
 alias reload="source $HOME/.zshrc"
 alias mac.dock.left='defaults write com.apple.dock "orientation" -string "left" && killall Dock'
@@ -41,7 +47,5 @@ function precmd {
     #
 }
 
-plugins=(git golang macos docker)
-source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
