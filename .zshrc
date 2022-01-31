@@ -1,13 +1,13 @@
-export HQ=$(dirname $(readlink "$HOME/.zshrc"));
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
-export CASE_SENSITIVE="true"
+export CASE_SENSITIVE="false"
 export DISABLE_AUTO_TITLE="false"
 export ENABLE_CORRECTION="true"
 export HIST_STAMPS="yyyy-mm-dd"
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
+alias cat="bat --paging=never --theme=Dracula --style=numbers"
 alias reload="source $HOME/.zshrc"
 alias mac.dock.left='defaults write com.apple.dock "orientation" -string "left" && killall Dock'
 alias mac.dock.right='defaults write com.apple.dock "orientation" -string "right" && killall Dock'
