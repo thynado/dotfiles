@@ -1,0 +1,16 @@
+
+# No new line
+add_newline = false
+
+# A minimal left prompt
+format = "[\\$ ](dimmed)"
+
+# move the rest of the prompt to the right
+right_format = "$directory$git_branch"
+
+[directory]
+style = "dimmed"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = ""
