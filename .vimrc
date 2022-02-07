@@ -12,9 +12,8 @@ set t_Co=256
 colorscheme onehalfdark
 hi Normal guibg=NONE ctermbg=NONE
 let g:airline_theme='onehalfdark'
-
+set backspace=indent,eol,start
 set noswapfile
-set cursorcolumn
 set cursorline
 set expandtab
 set history=1000
