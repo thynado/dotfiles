@@ -14,7 +14,6 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:airline_theme='onehalfdark'
 set backspace=indent,eol,start
 set noswapfile
-set cursorline
 set expandtab
 set history=1000
 set hlsearch
