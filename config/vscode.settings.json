@@ -59,9 +59,7 @@
     "editor.wordWrap" : "on",
     "material-icon-theme.folders.associations" : {
         "autolib" : "lib",
-        "contrib" : "plugin",
-        "ws_framework" : "core",
-        "ws_apps_common" : "helper"
+        "contrib" : "plugin"
     },
     "[php]" : {
         "editor.rulers" : [
@@ -83,9 +81,6 @@
     "editor.renderWhitespace" : "all",
     "workbench.tree.indent" : 13,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    },
     "gitlens.currentLine.pullRequests.enabled": false,
     "[log]": {
         "editor.wordWrap": "off"
