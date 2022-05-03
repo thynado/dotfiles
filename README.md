@@ -8,15 +8,16 @@
 
 <details>
   <summary> <b>Colors:</b> </summary>
-  | Target | Color |
-  |:---|:---:|
+  
+  | Target     |                                   Color                                   |
+  | :--------- | :-----------------------------------------------------------------------: |
   | Foreground | ![#f9fafb](https://via.placeholder.com/15/f9fafb/000000?text=+) `#f9fafb` |
   | Background | ![#111111](https://via.placeholder.com/15/111111/000000?text=+) `#111111` |
-  | Selection | ![#82c0f2](https://via.placeholder.com/15/82c0f2/000000?text=+) `#82c0f2` |
-  | Cursor | ![#8b5cf6](https://via.placeholder.com/15/8b5cf6/000000?text=+) `#8b5cf6` |
+  | Selection  | ![#82c0f2](https://via.placeholder.com/15/82c0f2/000000?text=+) `#82c0f2` |
+  | Cursor     | ![#8b5cf6](https://via.placeholder.com/15/8b5cf6/000000?text=+) `#8b5cf6` |
 
-  | Color   |  Normal   |  Bright   |
-  | :------ | :-------: | :-------: |
+  | Color   |                                  Normal                                   |                                  Bright                                   |
+  | :------ | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
   | Black   | ![#707070](https://via.placeholder.com/15/707070/000000?text=+) `#707070` | ![#666768](https://via.placeholder.com/15/666768/000000?text=+) `#666768` |
   | Red     | ![#ef4444](https://via.placeholder.com/15/ef4444/000000?text=+) `#ef4444` | ![#ff6d67](https://via.placeholder.com/15/ff6d67/000000?text=+) `#ff6d67` |
   | Green   | ![#10b981](https://via.placeholder.com/15/10b981/000000?text=+) `#10b981` | ![#5ff967](https://via.placeholder.com/15/5ff967/000000?text=+) `#5ff967` |
