@@ -1,4 +1,6 @@
 unsetopt correct_all
+setopt nocorrectall
+setopt correct
 
 export ZSH="$HOME/.oh-my-zsh"
 export CASE_SENSITIVE="false"
@@ -39,6 +41,8 @@ alias dupes="pbpaste | sort -u | pbcopy"
 alias ip.pub="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ip.net="ipconfig getifaddr en0"
 alias ip.eth="ipconfig getifaddr en7"
+alias mac.ui.light="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to false'"
+alias mac.ui.dark="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to true'"
 alias mac.dock.left='defaults write com.apple.dock "orientation" -string "left" && killall Dock'
 alias mac.dock.right='defaults write com.apple.dock "orientation" -string "right" && killall Dock'
 alias mac.dock.bottom='defaults write com.apple.dock "orientation" -string "bottom" && killall Dock'

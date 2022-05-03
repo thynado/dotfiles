@@ -2,13 +2,13 @@
 SHELL:=/bin/bash
 
 define line
-	@echo "$$(tput setaf 15; tput setab 68) > $$(tput setaf 15; tput setab 8) $1 $$(tput sgr0)"
+	@echo "$$(tput setaf 8)> $$(tput setaf 2)$1 $$(tput sgr0)"
 endef
 
 .PHONY: install
-install: ## Install the bits and pieces
+install: ## Install Zsh, Homebrew, Vim, etc.
 	$(call line,Installing shell)
-	@ln -vsf $$PWD/.zshrc $$HOME/.zshrc
+	@cp .zshrc $$HOME/.zshrc
 	$(call line,Installing Homebrew)
 	@if ! command -v brew &> /dev/null; then \
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
@@ -16,16 +16,19 @@ install: ## Install the bits and pieces
 	$(call line,Installing Homebrew Dependencies)
 	@brew bundle
 	$(call line,Installing Vim)
-	@ln -vsf $$PWD/.vimrc $$HOME/.vimrc
+	@cp .vimrc $$HOME/.vimrc
 	@if [ ! -f $$HOME/.vim/autoload/plug.vim ]; then \
 		curl -fLo $$HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
 	fi
 
 .PHONY: backup
-backup: ## Backup dotfiles from environment
+backup: ## Backup dotfiles, configs, etc.
 	$(call line,Backing up Homebrew)
-	@brew bundle dump -f
+	@brew bundle dump -f -q
+	$(call line,Backing up VSCode)
+	@cp $$HOME/Library/Application\ Support/Code/User/settings.json ./config/vscode.settings.json
+	@cp $$HOME/Library/Application\ Support/Code/User/keybindings.json ./config/vscode.keybindings.json
 
 .PHONY: help
 help:  ## Display this help
-	@awk 'BEGIN {FS = ":.*##"; printf "Tasks:\033[36m\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  %-8s \033[2;99m%s\033[0m\n", $$1, $$2 }' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*##";} /^[a-zA-Z_-]+:.*?##/ { printf "make %-8s \033[2;99m%s\033[0m\n", $$1, $$2 }' $(MAKEFILE_LIST)

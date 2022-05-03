@@ -6,6 +6,8 @@ add_newline = false
 format = "[\\$ ](dimmed)"
 
 # move the rest of the prompt to the right
+# right_format = "$directory$git_branch$git_metrics"
+# right_format = "$directory$git_metrics"
 right_format = "$directory$git_branch"
 
 [directory]
@@ -14,3 +16,6 @@ format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 symbol = ""
+
+# [git_metrics]
+# disabled = false
