@@ -29,5 +29,5 @@
 
 <details>
   <summary> <b>Screenshot:</b> </summary>
-  <img src=terminal.png>
+  <img src=assets/terminal.png>
 </details>
