@@ -8,15 +8,16 @@ endef
 .PHONY: install
 install: ## Install Zsh, Homebrew, Vim, etc.
 	$(call line,Installing shell)
-	@cp .zshrc $$HOME/.zshrc
+	@cp $$PWD/.zshrc $$HOME/.zshrc
+	@cp $$PWD/starship.toml $$HOME/.config/starship.toml
 	$(call line,Installing Homebrew)
 	@if ! command -v brew &> /dev/null; then \
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
 	fi
 	$(call line,Installing Homebrew Dependencies)
-	@brew bundle
+	@brew bundle -q
 	$(call line,Installing Vim)
-	@cp .vimrc $$HOME/.vimrc
+	@cp $$PWD/.vimrc $$HOME/.vimrc
 	@if [ ! -f $$HOME/.vim/autoload/plug.vim ]; then \
 		curl -fLo $$HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; \
 	fi
